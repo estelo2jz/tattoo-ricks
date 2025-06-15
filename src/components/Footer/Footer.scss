@@ -1,8 +1,38 @@
 .footer {
-  background: #0e0e0e;
+  background-color: #0e0e0e;
   color: #ccc;
   text-align: center;
-  padding: 1.5rem 1rem;
-  font-size: 0.9rem;
+  padding: 2rem 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    img {
+      height: 24px;
+      width: auto;
+      vertical-align: middle;
+      filter: brightness(1.2);
+    }
+  }
+
+  @media (max-width: 480px) {
+    a {
+      flex-direction: column;
+      text-align: center;
+
+      img {
+        margin-top: 0.5rem;
+      }
+    }
+  }
 }
