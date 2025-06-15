@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom"; // ✅ Correct import here
 import "./Hero.scss";
-import heroBg from "../../assets/tattoo.jpg"; // Make sure to add an image in this path
+import heroBg from "../../assets/RN.jpeg";
 
 const Hero = () => {
   return (
@@ -12,9 +13,11 @@ const Hero = () => {
         <div className="hero__content">
           <h1>Ink That Tells Your Story</h1>
           <p>Custom tattoos by an artist who lives to bring your vision to life.</p>
-          {/* <Link to="/booking"> */}
+          
+          {/* ✅ Wrap the button in Link */}
+          <Link to="/booking">
             <button>Book a Session</button>
-          {/* </Link> */}
+          </Link>
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
-        <Link to="/" onClick={closeMenu}>InkVibe</Link>
+        <Link to="/" onClick={closeMenu}>Ricks Nayupac</Link>
       </div>
 
       <nav className={`header__nav ${open ? "open" : ""}`}>
@@ -18,7 +18,7 @@ const Header = () => {
         <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
         <Link to="/about" onClick={closeMenu}>About</Link>
         <Link to="/booking" onClick={closeMenu}>Booking</Link>
-        <Link to="/contact" onClick={closeMenu}>Contact</Link>
+        {/* <Link to="/contact" onClick={closeMenu}>Contact</Link> */}
       </nav>
 
       <div
