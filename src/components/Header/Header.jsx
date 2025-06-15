@@ -18,7 +18,7 @@ const Header = () => {
         <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
         <Link to="/about" onClick={closeMenu}>About</Link>
         <Link to="/booking" onClick={closeMenu}>Booking</Link>
-        {/* <Link to="/contact" onClick={closeMenu}>Contact</Link> */}
+        <Link to="/contact" onClick={closeMenu}>Contact</Link>
       </nav>
 
       <div
