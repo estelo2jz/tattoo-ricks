@@ -13,7 +13,7 @@ const Booking = () => {
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("https://formspree.io/f/mayvlvwg", { // Replace with your real endpoint
+    const res = await fetch("https://formspree.io/f/mblyyzlj", { // Replace with your real endpoint
       method: "POST",
       headers: {
         "Content-Type": "application/json",
