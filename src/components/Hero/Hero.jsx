@@ -1,4 +1,4 @@
-import React, { Link } from "react";
+import React from "react";
 import "./Hero.scss";
 import heroBg from "../../assets/tattoo.jpg"; // Make sure to add an image in this path
 
