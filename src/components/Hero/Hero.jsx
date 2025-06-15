@@ -11,7 +11,7 @@ const Hero = () => {
     >
       <div className="hero__overlay">
         <div className="hero__content">
-          <h1>Ink That Tells Your Story</h1>
+          <h1>Ink Yor Vision</h1>
           <p>Custom tattoos by an artist who lives to bring your vision to life.</p>
           
           {/* ✅ Wrap the button in Link */}
