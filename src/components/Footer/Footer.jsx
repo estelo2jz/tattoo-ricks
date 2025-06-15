@@ -7,8 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <a target="new_blank" href="https://estelo.net/">
         &copy; {new Date().getFullYear()} 
-        <img src={EMALogo} alt="EMA LOGO" />
-        . All rights reserved.
+        <img src={EMALogo} alt="EMA LOGO" /> | All rights reserved.
       </a>
     </footer>
   );
