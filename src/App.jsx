@@ -6,6 +6,8 @@ import Gallery from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
 import Booking from "./pages/Booking/Booking";
 import Contact from "./pages/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import "./App.scss";
 
 const App = () => {
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <Footer />
+      <ScrollToTop />
     </Router>
   );
 };

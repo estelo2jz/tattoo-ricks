@@ -1,9 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./TattooCard.scss";
 
 const TattooCard = ({ tattoo }) => {
   return (
-    <div className="tattoo-card">
+    <motion.div
+      className="tattoo-card"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       <div
         className="tattoo-card__image"
         style={{ backgroundImage: `url(${tattoo.image})` }}
@@ -11,7 +18,7 @@ const TattooCard = ({ tattoo }) => {
       <div className="tattoo-card__info">
         <h3>{tattoo.title}</h3>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

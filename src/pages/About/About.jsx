@@ -1,10 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./About.scss";
-import artistImg from "../../assets/RK.png"; // Add your artist image here
+import artistImg from "../../assets/RN.jpeg"; // Add your artist image here
 
 const About = () => {
   return (
-    <section className="about">
+    <motion.section className="about">
       <div className="about__container">
         <div className="about__image">
           <img src={artistImg} alt="Tattoo Artist" />
@@ -22,7 +23,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} Ricks Nayupac Studio. All rights reserved.</p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
