@@ -6,7 +6,7 @@
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   &__logo {
@@ -14,6 +14,7 @@
     font-family: 'Anton', sans-serif;
     color: #d4af37;
     letter-spacing: 2px;
+    z-index: 1100;
   }
 
   &__nav {
@@ -24,6 +25,7 @@
       font-size: 1rem;
       font-weight: 500;
       position: relative;
+      transition: color 0.3s;
 
       &::after {
         content: "";
@@ -42,25 +44,28 @@
     }
 
     @media (max-width: 768px) {
-      position: absolute;
-      top: 100%;
-      left: 0;
+      position: fixed;
+      top: 0;
       right: 0;
+      height: 100vh;
+      width: 75%;
+      max-width: 300px;
       background-color: #0e0e0e;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.4s ease;
-      padding: 0 1rem;
+      padding: 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
 
       &.open {
-        max-height: 300px;
-        padding: 1rem 1rem;
+        transform: translateX(0);
       }
 
       a {
         padding: 1rem 0;
+        font-size: 1.2rem;
       }
     }
   }
@@ -68,8 +73,9 @@
   &__toggle {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
 
     span {
       width: 25px;

@@ -5,22 +5,26 @@ import "./Header.scss";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
+  const closeMenu = () => setOpen(false);
+
   return (
     <header className="header">
       <div className="header__logo">
-        <Link to="/">Ricks Nayupac</Link>
-        
+        <Link to="/" onClick={closeMenu}>InkVibe</Link>
       </div>
+
       <nav className={`header__nav ${open ? "open" : ""}`}>
-        <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-        <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
-        <Link to="/about" onClick={() => setOpen(false)}>About</Link>
-        <Link to="/booking" onClick={() => setOpen(false)}>Booking</Link>
-        <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+        <Link to="/" onClick={closeMenu}>Home</Link>
+        <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+        <Link to="/booking" onClick={closeMenu}>Booking</Link>
+        <Link to="/contact" onClick={closeMenu}>Contact</Link>
       </nav>
+
       <div
         className={`header__toggle ${open ? "active" : ""}`}
         onClick={() => setOpen(!open)}
+        aria-label="Toggle menu"
       >
         <span />
         <span />
