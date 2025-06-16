@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "./Booking.scss";
 
 const Booking = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [selectedDate, setSelectedDate] = useState(null);
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -13,23 +16,26 @@ const Booking = () => {
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("https://formspree.io/f/mblyyzlj", { // Replace with your real endpoint
+    const res = await fetch("https://formspree.io/f/YOUR_REAL_ID", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify({
-        name: form.name,
         email: form.email,
-        message: form.message,
+        message: `Name: ${form.name}\nDate: ${selectedDate?.toLocaleDateString()}\n\n${form.message}`,
       }),
     });
+
+    const result = await res.json();
 
     if (res.ok) {
       setStatus("Thanks! Your booking request was sent.");
       setForm({ name: "", email: "", message: "" });
+      setSelectedDate(null);
     } else {
-      setStatus("Something went wrong. Please try again later.");
+      setStatus(result.error || "Something went wrong. Please try again later.");
     }
   };
 
@@ -48,11 +54,21 @@ const Booking = () => {
         <input
           type="email"
           name="email"
-          placeholder="Your Email"
+          placeholder="Your Email"wa
           value={form.email}
           onChange={handleChange}
           required
         />
+
+        {/* <DatePicker
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+          placeholderText="Preferred Date"
+          className="booking__date-picker"
+          minDate={new Date()}
+          required
+        /> */}
+
         <textarea
           name="message"
           placeholder="What type of tattoo are you looking for?"
