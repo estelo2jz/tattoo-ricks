@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
@@ -13,6 +14,13 @@ import "./App.scss";
 const App = () => {
   return (
     <Router>
+      <Helmet>
+        <title>Ricks Nayupac Tattoo Studio</title>
+        <meta name="description" content="Custom tattoos with bold stories. Book your session with Ricks Nayupac." />
+        <meta name="keywords" content="tattoo, artist, ink, custom tattoos, Ricks Nayupac, gallery" />
+        <meta name="author" content="Ricks Nayupac" />
+      </Helmet>
+
       <div className="app">
         <Header />
         <Routes>

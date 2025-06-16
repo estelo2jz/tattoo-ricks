@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Booking.scss";
@@ -16,7 +17,7 @@ const Booking = () => {
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("https://formspree.io/f/YOUR_REAL_ID", {
+    const res = await fetch("https://formspree.io/f/mblyyzlj", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,46 +41,89 @@ const Booking = () => {
   };
 
   return (
-    <section className="booking">
+    <motion.section
+      className="booking"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <h2>Book a Session</h2>
-      <form className="booking__form" onSubmit={handleSubmit}>
-        <input
+
+      <motion.form
+        className="booking__form"
+        onSubmit={handleSubmit}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <motion.input
           type="text"
           name="name"
           placeholder="Your Name"
           value={form.name}
           onChange={handleChange}
           required
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+          viewport={{ once: true }}
         />
-        <input
+
+        <motion.input
           type="email"
           name="email"
-          placeholder="Your Email"wa
+          placeholder="Your Email"
           value={form.email}
           onChange={handleChange}
           required
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4 }}
+          viewport={{ once: true }}
         />
 
-        {/* <DatePicker
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
-          placeholderText="Preferred Date"
-          className="booking__date-picker"
-          minDate={new Date()}
-          required
-        /> */}
+        <motion.div
+          className="booking__datepicker-wrapper"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            placeholderText="Preferred Date"
+            className="booking__date-picker"
+            minDate={new Date()}
+            required
+          />
+        </motion.div>
 
-        <textarea
+        <motion.textarea
           name="message"
           placeholder="What type of tattoo are you looking for?"
           value={form.message}
           onChange={handleChange}
           required
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          viewport={{ once: true }}
         />
-        <button type="submit">Send Booking Request</button>
+
+        <motion.button
+          type="submit"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          Send Booking Request
+        </motion.button>
+
         {status && <p className="booking__status">{status}</p>}
-      </form>
-    </section>
+      </motion.form>
+    </motion.section>
   );
 };
 
