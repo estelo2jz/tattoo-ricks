@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
@@ -10,15 +10,15 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
-        <Link to="/" onClick={closeMenu}>Ricks Nayupac</Link>
+        <NavLink to="/" onClick={closeMenu}>Ricks Nayupac</NavLink>
       </div>
 
       <nav className={`header__nav ${open ? "open" : ""}`}>
-        <Link to="/" onClick={closeMenu}>Home</Link>
-        <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
-        <Link to="/about" onClick={closeMenu}>About</Link>
-        <Link to="/booking" onClick={closeMenu}>Booking</Link>
-        <Link to="/contact" onClick={closeMenu}>Contact</Link>
+        <NavLink to="/" onClick={closeMenu} className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
+        <NavLink to="/gallery" onClick={closeMenu} className={({ isActive }) => isActive ? "active" : ""}>Gallery</NavLink>
+        <NavLink to="/about" onClick={closeMenu} className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
+        <NavLink to="/booking" onClick={closeMenu} className={({ isActive }) => isActive ? "active" : ""}>Booking</NavLink>
+        <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink>
       </nav>
 
       <div
