@@ -84,7 +84,7 @@ const Booking = () => {
           viewport={{ once: true }}
         />
 
-        <motion.div
+        {/* <motion.div
           className="booking__datepicker-wrapper"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -94,12 +94,16 @@ const Booking = () => {
           <DatePicker
             selected={selectedDate}
             onChange={(date) => setSelectedDate(date)}
-            placeholderText="Preferred Date"
+            placeholderText="Preferred Date (Mon & Tue Only)"
             className="booking__date-picker"
             minDate={new Date()}
             required
+            filterDate={(date) => {
+              const day = date.getDay();
+              return day === 1 || day === 2; // 1 = Monday, 2 = Tuesday
+            }}
           />
-        </motion.div>
+        </motion.div> */}
 
         <motion.textarea
           name="message"
