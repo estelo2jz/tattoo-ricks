@@ -13,16 +13,16 @@ import Tattoo10 from '../../assets/tat00.jpeg';
 import "./Gallery.scss";
 
 const tattoos = [
-  { id: 1, title: "Dragon Sleeve", image: Tattoo01 },
-  { id: 2, title: "Geometric Mandala", image: Tattoo02 },
-  { id: 3, title: "Portrait Realism", image: Tattoo03 },
-  { id: 4, title: "Traditional Skull", image: Tattoo04 },
-  { id: 5, title: "Blackwork Rose", image: Tattoo05 },
-  { id: 6, title: "Neo-Japanese Koi", image: Tattoo06 },
-  { id: 7, title: "Neo-Japanese Koi", image: Tattoo07 },
-  { id: 8, title: "Neo-Japanese Koi", image: Tattoo08 },
-  { id: 9, title: "Neo-Japanese Koi", image: Tattoo09 },
-  { id: 10, title: "Neo-Japanese Koi", image: Tattoo10 },
+  { id: 1, title: "", image: Tattoo01 },
+  { id: 2, title: "", image: Tattoo02 },
+  { id: 3, title: "", image: Tattoo03 },
+  { id: 4, title: "", image: Tattoo04 },
+  { id: 5, title: "", image: Tattoo05 },
+  { id: 6, title: "", image: Tattoo06 },
+  { id: 7, title: "", image: Tattoo07 },
+  { id: 8, title: "", image: Tattoo08 },
+  { id: 9, title: "", image: Tattoo09 },
+  { id: 10, title: "", image: Tattoo10 },
 ];
 
 const Gallery = () => {
