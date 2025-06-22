@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-// import DatePicker from "react-datepicker";
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Booking.scss";
 
@@ -84,7 +84,7 @@ const Booking = () => {
           viewport={{ once: true }}
         />
 
-        {/* <motion.div
+        <motion.div
           className="booking__datepicker-wrapper"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -103,7 +103,7 @@ const Booking = () => {
               return day === 1 || day === 2; // 1 = Monday, 2 = Tuesday
             }}
           />
-        </motion.div> */}
+        </motion.div>
 
         <motion.textarea
           name="message"
