@@ -31,7 +31,7 @@ const Gallery = () => {
       <h2>Featured Tattoos</h2>
       <div className="gallery__grid">
         {tattoos.map((tattoo, index) => (
-          <TattooCard key={tattoo.id} tattoo={tattoo} delay={index * 0.2} />
+          <TattooCard key={tattoo.id} tattoo={tattoo} delay={index * 0.2} alt={`Tattoo design: ${tattoos.title}`} />
         ))}
       </div>
     </section>

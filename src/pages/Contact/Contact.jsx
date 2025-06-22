@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Contact.scss";
-import { FaFacebookF, FaEnvelope } from "react-icons/fa";
+import { FaFacebookF, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -27,6 +27,9 @@ const Contact = () => {
         <div className="contact__socials">
           <a href="https://www.facebook.com/p/Ricks-Nayupac-Tattoo-100083419930962/" target="_blank" rel="noreferrer">
             <FaFacebookF /> Facebook
+          </a>
+          <a href="https://www.instagram.com/ricksnayupac/" target="_blank" rel="noreferrer">
+            <FaInstagram /> Instagram
           </a>
           <a href="mailto:nayupacricks@gmail.com">
             <FaEnvelope /> nayupacricks@gmail.com
