@@ -1,15 +1,15 @@
 import React from "react";
 import TattooCard from "../../components/TattooCard/TattooCard";
-import Tattoo01 from '../../assets/tat01.jpg';
-import Tattoo02 from '../../assets/tat02.jpg';
-import Tattoo03 from '../../assets/tat03.jpg';
-import Tattoo04 from '../../assets/tat04.jpg';
-import Tattoo05 from '../../assets/tat05.jpg';
-import Tattoo06 from '../../assets/tat06.jpg';
-import Tattoo07 from '../../assets/tat07.jpg';
-import Tattoo08 from '../../assets/tat08.jpg';
-import Tattoo09 from '../../assets/tat09.jpg';
-import Tattoo10 from '../../assets/tat00.jpg';
+import Tattoo01 from '../../assets/tat01.jpeg';
+import Tattoo02 from '../../assets/tat02.jpeg';
+import Tattoo03 from '../../assets/tat03.jpeg';
+import Tattoo04 from '../../assets/tat04.jpeg';
+import Tattoo05 from '../../assets/tat05.jpeg';
+import Tattoo06 from '../../assets/tat06.jpeg';
+import Tattoo07 from '../../assets/tat07.jpeg';
+import Tattoo08 from '../../assets/tat08.jpeg';
+import Tattoo09 from '../../assets/tat09.jpeg';
+import Tattoo10 from '../../assets/tat00.jpeg';
 import "./Gallery.scss";
 
 const tattoos = [
