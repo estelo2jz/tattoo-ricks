@@ -8,12 +8,12 @@ const Hero = () => {
   return (
     <motion.section
       className="hero"
-      style={{ backgroundImage: `url(${heroBg})` }}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
+      <img src={heroBg} alt="Tattoo Background" className="hero__bg" />
       <div className="hero__overlay">
         <div className="hero__content">
           <h1>Ink Your Vision</h1>
