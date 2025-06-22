@@ -1,11 +1,15 @@
 import React from "react";
 import TattooCard from "../../components/TattooCard/TattooCard";
-import Tattoo01 from '../../assets/tattoo01.jpg';
-import Tattoo02 from '../../assets/tattoo02.jpg';
-import Tattoo03 from '../../assets/tattoo03.jpg';
-import Tattoo04 from '../../assets/tattoo04.jpg';
-import Tattoo05 from '../../assets/tattoo05.jpg';
-import Tattoo06 from '../../assets/tattoo06.jpg';
+import Tattoo01 from '../../assets/tat01.jpg';
+import Tattoo02 from '../../assets/tat02.jpg';
+import Tattoo03 from '../../assets/tat03.jpg';
+import Tattoo04 from '../../assets/tat04.jpg';
+import Tattoo05 from '../../assets/tat05.jpg';
+import Tattoo06 from '../../assets/tat06.jpg';
+import Tattoo07 from '../../assets/tat07.jpg';
+import Tattoo08 from '../../assets/tat08.jpg';
+import Tattoo09 from '../../assets/tat09.jpg';
+import Tattoo10 from '../../assets/tat00.jpg';
 import "./Gallery.scss";
 
 const tattoos = [
@@ -15,6 +19,10 @@ const tattoos = [
   { id: 4, title: "Traditional Skull", image: Tattoo04 },
   { id: 5, title: "Blackwork Rose", image: Tattoo05 },
   { id: 6, title: "Neo-Japanese Koi", image: Tattoo06 },
+  { id: 7, title: "Neo-Japanese Koi", image: Tattoo07 },
+  { id: 8, title: "Neo-Japanese Koi", image: Tattoo08 },
+  { id: 9, title: "Neo-Japanese Koi", image: Tattoo09 },
+  { id: 10, title: "Neo-Japanese Koi", image: Tattoo10 },
 ];
 
 const Gallery = () => {
