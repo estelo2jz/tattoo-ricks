@@ -4,7 +4,6 @@ import Tattoo01 from '../../assets/tat01.jpeg';
 import Tattoo02 from '../../assets/tat02.jpeg';
 import Tattoo03 from '../../assets/tat03.jpeg';
 import Tattoo04 from '../../assets/tat04.jpeg';
-import Tattoo05 from '../../assets/tat05.jpeg';
 import Tattoo06 from '../../assets/tat06.jpeg';
 import Tattoo07 from '../../assets/tat07.jpeg';
 import Tattoo08 from '../../assets/tat08.jpeg';
@@ -17,7 +16,6 @@ const tattoos = [
   { id: 2, title: "", image: Tattoo02 },
   { id: 3, title: "", image: Tattoo03 },
   { id: 4, title: "", image: Tattoo04 },
-  { id: 5, title: "", image: Tattoo05 },
   { id: 6, title: "", image: Tattoo06 },
   { id: 7, title: "", image: Tattoo07 },
   { id: 8, title: "", image: Tattoo08 },
